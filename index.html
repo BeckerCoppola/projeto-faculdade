@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Leituras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Tela de Usuário sem leitura cadastrada -->
+    <div id="noReadingScreen" class="no-reading-screen">
+        <p>Você não tem leituras cadastradas.</p>
+        <button id="openModalBtnFromNoReading">Cadastrar Leitura</button>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <!-- Conteúdo do Modal -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Cadastrar Nova Leitura</h2>
+            <form id="cadastroLeituraForm">
+                <label for="titulo">Título do Livro:</label>
+                <input type="text" id="titulo" name="titulo" required>
+                
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor" name="autor" required>
+                
+                <label for="dataLeitura">Data da Leitura:</label>
+                <input type="date" id="dataLeitura" name="dataLeitura" required>
+                
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
